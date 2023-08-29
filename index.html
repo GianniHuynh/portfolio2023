@@ -92,7 +92,7 @@
 
         </div>
         <div class="contactDiviser"></div>
-        <div class="contactCliquable">
+        <div class="contactCliquable" id="cvLink">
             <p class="contactText" style="font-weight: 500;">Consulter mon CV</p>
             <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
 
@@ -164,6 +164,11 @@
         document.getElementById("linkedinLink").addEventListener("click", function () {
             // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
             window.open("https://www.linkedin.com/in/gianni-huynh-1b9aa41b9/", "_blank");
+        });
+
+        document.getElementById("cvLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("assets/gianni_huynh_cv_2023.pdf", "_blank");
         });
 
         document.getElementById("billeonWebsite").addEventListener("click", function () {
