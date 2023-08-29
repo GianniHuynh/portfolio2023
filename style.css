@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  transition: background 1.5s ease;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  background-image: url("assets/fond.svg");
+  background-size: cover;
+  /* Ajuster la taille de l'image de fond */
+  background-position: center;
+  /* Positionner l'image de fond au centre */
+  background-repeat: no-repeat;
+  /* Éviter la répétition de l'image de fond */
+  color: white;
+  position: relative;
+}
+
+.categoryMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  z-index: 100;
+  padding: 50px;
+}
+
+.mainTitle {
+  color: #ebebeb;
+  font-family: Roboto;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+.mainSubtitle {
+  color: #ebebeb;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+.mainLittleText {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+.firstSection {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secondSection {
+  height: 100vh;
+
+  display: flex;
+  padding-top: 10vh;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.thirdSection {
+  height: 100vh;
+  padding-right: 15%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fourthSection {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 15%;
+}
+
+.categoryMenu li {
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 100;
+  padding-right: 10px;
+  /* Espacement pour le rond */
+  position: relative;
+}
+
+.categoryMenu li.active {
+  font-weight: 700;
+  /* Texte en gras */
+}
+
+.categoryMenu li.active::after {
+  content: "";
+  /* Crée le rond */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.projectItem {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  transition: all 0.3s ease;
+  /* Ajoutez cette ligne pour la transition fluide */
+}
+
+.projectItem:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  /* Grossissement légèrement */
+  color: rgb(233, 233, 233);
+  /* Changement de couleur */
+}
+
+.proposTitle {
+  font-weight: 700;
+  margin-bottom: 100px;
+
+  font-size: 6em;
+}
+
+.proposBox {
+  padding-left: 200px;
+  padding-right: 200px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+}
+
+@media (min-width: 1600px) {
+  .proposBox {
+    padding-left: 400px;
+    /* Nouveau padding gauche */
+    padding-right: 400px;
+    /* Nouveau padding droit */
+
+  }
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: 100;
+  margin-bottom: 20px;
+
+  margin-left: 20px;
+}
+
+.contactText {
+  font-size: 1.75em;
+  font-weight: 100;
+  /* margin-bottom: 40px; */
+}
+
+.contactCliquable {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* Alignement horizontal à gauche (défaut) */
+  position: relative;
+}
+
+.footer {
+  background-color: #eaeaea;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.contactCliquable::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  /* Couleur de l'underline */
+  transform: scaleX(0);
+  /* Commence sans largeur (invisible) */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  /* Transition de la largeur */
+}
+
+.contactCliquable:hover::before {
+  transform: scaleX(1);
+  /* Augmente la largeur pour simuler l'effet d'underline */
+}
+
+.contactDiviser {
+  height: 40px;
+}
+
+.proposImg {
+  height: 350px;
+}
+
+.arrowIcon {
+  height: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .categoryMenu {
+    display: none;
+  }
+
+  .mainTitle {
+    font-size: 60px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .mainSubtitle {
+    font-size: 15px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .mainLittleText {
+    font-size: 10px;
+  }
+
+  .proposTitle {
+    font-size: 3em;
+  }
+
+  .proposBox {
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+
+
+  .proposImg {
+    height: 200px;
+  }
+
+  .projectItem {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .fourthSection {
+    font-size: 10px;
+  }
+
+  .thirdSection {
+    padding-right: 0;
+    padding-top: 50vh;
+  }
+
+  .arrowIcon {
+    height: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+}

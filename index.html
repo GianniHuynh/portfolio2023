@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianni HUYNH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="categoryMenu">
+        <ul>
+            <li>Accueil</li>
+            <li>Mon Parcours</li>
+            <li>Projets</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="firstSection section" id="accueil">
+
+        <h1 class="mainTitle">GIANNI HUYNH</h1>
+        <h3 class="mainSubtitle">Développeur front-end web et mobile en recherche d'alternance.</h3>
+        <p class="mainLittleText">Portfolio 2023.</p>
+
+    </div>
+    <div class="secondSection section" id="mon parcours">
+
+        <h1 class="proposTitle ">Mon Parcours</h1>
+        <div class="proposBox">
+            <img class="proposImg" src="assets/personnal_picture.png" alt="picture of me">
+            <p>Je m'appelle Gianni, j'ai 21 ans et je suis <b>développeur web et mobile. </b> Ma passion pour le
+                développement web est née à travers mes premiers projets personnels entrepris en solitaire ou
+                en équipe. Cet intérêt m'a naturellement dirigé vers un
+                <b>BTS Systèmes Numériques</b>, où j'ai consolidé mes bases de l'informatique (Réseau, cybersécurité,
+                programmation...)</br></br>
+
+                La suite de mon plan profesionnel m'a ensuite conduit vers un Bachelor <b>Concepteur Développeur
+                    d'Applications</b> au CESI où mon
+                expérience d'alternance au sein de la startup <b><span id="billeonWebsite"
+                        style="cursor: pointer; ">Billeon</span></b> m'a permis de prendre en charge le développement
+                front-end de leur application mobile, aujourd'hui en production et utilisée par un
+                public croissant.</br></br>
+
+                Ces expériences ont confirmées mon penchant pour le front-end, où ma passion pour la créativité et
+                l'expression artistique se fusionne harmonieusement avec le développement logiciel. Actuellement, je
+                suis à la recherche d'opportunités de développer de nouvelles compétences tout en mettant en action
+                celles déjà acquises.
+            </p>
+        </div>
+
+    </div>
+    <div class="thirdSection section" id="projets">
+
+        <diV class="projectItem" id="exploverLink">
+            <p>En cours - Mobile/Flutter/Maps API/Laravel</p>
+            <h2>Explover</h2>
+        </diV>
+        <diV class="projectItem" id="billeonLink">
+            <p>2023 - Mobile/Flutter/Firebase/Vue.js</p>
+            <h2>Billeon</h2>
+        </diV>
+        <diV class="projectItem" id="popupLink">
+            <p>2022 - Node.js/JS/Socket.io</p>
+            <h2>PopUp Chat</h2>
+        </diV>
+        <diV class="projectItem" id="crusherLink">
+            <p>2021 - Node.js/Express.js/MySQL</p>
+            <h2>Crusher</h2>
+        </diV>
+        <diV class="projectItem" id="spelldiceLink">
+            <p>2021 - HTML/CSS/JS/Electron.js</p>
+            <h2>Spelldice</h2>
+        </diV>
+
+    </div>
+    <div class="fourthSection section" id="contact">
+
+        <div class="contactCliquable" id="linkedinLink">
+            <p class="contactText" style="font-weight: 500;">Linkedin</p>
+            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
+
+        </div>
+        <div class="contactDiviser"></div>
+        <div class="contactCliquable" id="githubLink">
+            <p class="contactText" style="font-weight: 500;">GitHub</p>
+            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
+
+        </div>
+        <div class="contactDiviser"></div>
+        <div class="contactCliquable">
+            <p class="contactText" style="font-weight: 500;">Consulter mon CV</p>
+            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
+
+        </div>
+        <div class="contactDiviser"></div>
+        <div>
+            <p class="contactText">gianni.huynh@protonmail.com</p>
+
+        </div>
+        <div class="contactDiviser"></div>
+        <div>
+            <p class="contactText">07 82 31 23 03</p>
+
+        </div>
+        <div class="contactDiviser"></div>
+
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2023 Gianni HUYNH - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+
+        //AOS.init();
+
+
+
+        var body = document.getElementsByTagName('body')[0];
+
+        var selectedSection = 0;
+
+        // trigger this function every time the user scrolls
+        window.onscroll = function (event) {
+            var scroll = window.pageYOffset;
+            var sectionIndex = Math.floor(scroll / window.innerHeight); // Calcule l'index de la section actuelle en fonction du défilement
+
+            if (sectionIndex % 2 === 0) {
+                // Even section index, set background to black
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+            } else {
+                // Odd section index, set background to white
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+            }
+        };
+
+        const menuItems = document.querySelectorAll('.categoryMenu li');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // Supprimez la classe "active" de tous les éléments du menu
+                menuItems.forEach(item => item.classList.remove('active'));
+
+                // Ajoutez la classe "active" à l'élément sélectionné
+                this.classList.add('active');
+
+                // Faites défiler jusqu'à la section correspondante (si nécessaire)
+                const targetSection = this.textContent.toLowerCase();
+                const section = document.getElementById(targetSection);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        document.getElementById("linkedinLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://www.linkedin.com/in/gianni-huynh-1b9aa41b9/", "_blank");
+        });
+
+        document.getElementById("billeonWebsite").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://www.billeon.fr/", "_blank");
+        });
+
+        document.getElementById("githubLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://github.com/GianniHuynh", "_blank");
+        });
+
+        document.getElementById("exploverLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://giannihuynh.notion.site/Explover-c2277ae770aa4f4396bd5a3e9ef7dce1?pvs=4", "_blank");
+        });
+
+        document.getElementById("billeonLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://giannihuynh.notion.site/Billeon-a43e5949129746dc894c99f0bb06aa0d?pvs=4", "_blank");
+        });
+
+        document.getElementById("popupLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://giannihuynh.notion.site/PopUp-Chat-3058552ba3644d9abe1f40b0c5d5f953?pvs=4", "_blank");
+        });
+
+        document.getElementById("crusherLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://giannihuynh.notion.site/Crusher-25bfcd67c86e473784d93552dd9d23f1?pvs=4", "_blank");
+        });
+
+        document.getElementById("spelldiceLink").addEventListener("click", function () {
+            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            window.open("https://giannihuynh.notion.site/Spelldice-e8521b9aea6a491e979e4f6879364f27?pvs=4", "_blank");
+        });
+
+        /*  const menuItems = document.querySelectorAll('.categoryMenu li');
+ const sections = document.querySelectorAll('.section'); // Remplacez .section par le sélecteur de vos sections
+ 
+ const observerOptions = {
+     rootMargin: '-50%', // Ajustez la marge en fonction de vos besoins
+ };
+ 
+ const observer = new IntersectionObserver(entries => {
+     entries.forEach(entry => {
+         if (entry.isIntersecting) {
+             const targetSection = entry.target.id;
+             const correspondingMenuItem = document.querySelector(`.categoryMenu li[data-target="${targetSection}"]`);
+ 
+             if (correspondingMenuItem) {
+                 menuItems.forEach(item => item.classList.remove('active'));
+                 correspondingMenuItem.classList.add('active');
+             }
+         }
+     });
+ }, observerOptions);
+ 
+ sections.forEach(section => {
+     observer.observe(section);
+ });
+ 
+ menuItems.forEach(item => {
+     item.addEventListener('click', function () {
+         menuItems.forEach(item => item.classList.remove('active'));
+         this.classList.add('active');
+ 
+         const targetSection = this.dataset.target; // Utilisez un attribut "data-" pour stocker la cible de la section
+         const section = document.getElementById(targetSection);
+         if (section) {
+             section.scrollIntoView({ behavior: 'smooth' });
+         }
+     });
+ }); */
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
