@@ -77,7 +77,8 @@ ul {
   height: 100vh;
 
   display: flex;
-  padding-top: 10vh;
+  justify-content: center;
+
 
   align-items: center;
   flex-direction: column;
@@ -153,6 +154,7 @@ ul {
 .proposTitle {
   font-weight: 700;
   margin-bottom: 100px;
+
 
   font-size: 6em;
 }
@@ -267,7 +269,13 @@ h2 {
   }
 
   .proposTitle {
+    margin-top: 20%;
+    margin-bottom: 20px;
     font-size: 3em;
+  }
+
+  .secondSection {
+    justify-content: start;
   }
 
   .proposBox {
