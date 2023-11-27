@@ -10,7 +10,7 @@ body {
 
 body {
   transition: background 1.5s ease;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: black;
   background-image: url("assets/fond.svg");
   background-size: cover;
