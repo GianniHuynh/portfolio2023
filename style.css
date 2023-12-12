@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+:root{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -10,7 +14,7 @@ body {
 
 body {
   transition: background 1.5s ease;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  
   background-color: black;
   background-image: url("assets/fond.svg");
   background-size: cover;
@@ -21,6 +25,10 @@ body {
   /* Éviter la répétition de l'image de fond */
   color: white;
   position: relative;
+}
+
+.projectDesc{
+  font-weight: 200;
 }
 
 .categoryMenu {
@@ -42,7 +50,7 @@ body {
 
 .mainTitle {
   color: #ebebeb;
-  font-family: Roboto;
+
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
@@ -79,6 +87,7 @@ ul {
   flex-direction: column;
 }
 
+
 .secondSection {
   height: 100vh;
 
@@ -114,7 +123,7 @@ ul {
   cursor: pointer;
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 300;
   padding-right: 10px;
   /* Espacement pour le rond */
   position: relative;
@@ -189,7 +198,7 @@ ul {
 
 h2 {
   font-size: 4em;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 20px;
 
   margin-left: 20px;
