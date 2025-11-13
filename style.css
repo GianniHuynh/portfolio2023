@@ -358,14 +358,14 @@ h2 {
   .mainTitle {
     font-size: 60px;
     margin-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .mainSubtitle {
     font-size: 15px;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .mainLittleText {
@@ -380,11 +380,16 @@ h2 {
 
   .secondSection {
     justify-content: start;
+    padding: 0 20px;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 60px;
   }
 
   .aboutSection {
-    padding: 80px 10%;
+    padding: 80px 6% 60px 6%;
     gap: 30px;
+    min-height: auto;
   }
 
   .hobbiesGrid {
@@ -393,12 +398,12 @@ h2 {
   }
 
   .hobbyCard {
-    padding: 24px;
+    padding: 0px;
   }
 
   .proposBox {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
     flex-direction: column;
     align-items: center;
     text-align: justify;
@@ -428,10 +433,12 @@ h2 {
 
   .fourthSection {
     font-size: 10px;
+    padding: 0 20px;
   }
 
   .thirdSection {
-    padding-right: 0;
+    padding-right: 20px;
+    padding-left: 20px;
     padding-top: 50vh;
   }
 
