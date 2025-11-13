@@ -10,30 +10,32 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 </head>
 
 <body>
     <div class="categoryMenu">
         <ul>
-            <li>Accueil</li>
-            <li>Mon Parcours</li>
-            <li>Projets</li>
-            <li>Contact</li>
+            <li data-target="accueil">Accueil</li>
+            <li data-target="mon-parcours">Mon Parcours</li>
+            <li data-target="a-propos">À propos</li>
+            <li data-target="projets">Projets</li>
+            <li data-target="contact">Contact</li>
         </ul>
     </div>
     <div class="firstSection section" id="accueil">
 
         <h1 class="mainTitle">GIANNI HUYNH</h1>
-        <h3 class="mainSubtitle">Développeur web/mobile - Portfolio 2024</h3>
+        <h3 class="mainSubtitle">Développeur web/mobile - Portfolio 2025</h3>
 
 
     </div>
-    <div class="secondSection section" id="mon parcours">
+    <div class="secondSection section" id="mon-parcours">
 
         <h1 class="proposTitle ">Mon Parcours</h1>
         <div class="proposBox">
-            <img class="proposImg" src="assets/personnal_picture.png" alt="picture of me">
-            <p class="proposText">Je m'appelle Gianni, j'ai 21 ans et je suis <b>développeur web et mobile. </b> Ma
+            <img class="proposImg" src="assets/gianni.jpeg" alt="picture of me">
+            <p class="proposText">Je m'appelle Gianni, j'ai 23 ans et je suis <b>développeur web et mobile. </b> Ma
                 passion pour le
                 développement web est née à travers mes premiers projets personnels entrepris en solitaire ou
                 en équipe. Cet intérêt m'a naturellement dirigé vers un
@@ -41,21 +43,60 @@
                 programmation...)</br></br>
 
                 La suite de mon plan profesionnel m'a ensuite conduit vers un Bachelor <b>Concepteur Développeur
-                    d'Applications</b> au CESI où mon
+                    d'Applications</b> à CESI où mon
                 expérience d'alternance au sein de la startup <b><span id="billeonWebsite"
                         style="cursor: pointer; ">Billeon</span></b> m'a permis de prendre en charge la mise en place du
                 système de sprints et le développement
                 front-end de leur application mobile.</br></br>
 
-                Actuellement en première année de Mastère <b>Manager en architecture et applications
-                    logicielles des SI</b>,
-                je suis à la recherche d'opportunités d'alternance pour ma dernière année d'études afin de développer de nouvelles compétences tout en mettant
+                Titulaire d'un Mastère <b>Manager en architecture et applications
+                    logicielles des SI</b> effectué en alternance dans l'agence web/mobile <b>Bleu122</b>,
+                je suis à la recherche d'un poste de <b>développeur web</b> afin de développer de nouvelles compétences tout en mettant
                 en action mes acquis.
             </p>
         </div>
 
     </div>
+    <div class="aboutSection section" id="a-propos">
+
+    
+        <h1 class="proposTitle ">À propos</h1>
+        <p class="aboutIntro">
+            Au-delà du code, je suis animé par la musique depuis mes 10 ans : la guitare ne me quitte jamais.
+            J’aime aussi m’évader en pleine nature lors de randonnées, et partir à la découverte de nouvelles cultures
+            à travers mes voyages.
+        </p>
+        <div class="hobbiesGrid">
+            <div class="hobbyCard">
+                <div class="hobbyImageWrapper">
+                    <img src="assets/hobby_guitare.jpg" alt="Gianni jouant de la guitare">
+                </div>
+                <h3 class="hobbyTitle">Guitare & Musique</h3>
+                <p class="hobbyText">La guitare m’accompagne depuis l’enfance et nourrit ma créativité au quotidien. (Membre de plusieurs groupes de rock et composition d'instrumentales sur ordinateur)</p>
+            </div>
+            <div class="hobbyCard">
+                <div class="hobbyImageWrapper">
+                    <img src="assets/hobby_randonnee.jpg" alt="Gianni en randonnée">
+                </div>
+                <h3 class="hobbyTitle">Randonnée</h3>
+                <p class="hobbyText">Je me ressource en explorant les sentiers et les paysages naturels. (Trekking et randonnée dans les Pyrénées, les Alpes Suisses et Françaises, traversée de la laponie Suédoise en van)</p>
+            </div>
+            <div class="hobbyCard">
+                <div class="hobbyImageWrapper">
+                    <img src="assets/hobby_voyage.jpg" alt="Paysage de voyage">
+                </div>
+                <h3 class="hobbyTitle">Voyages</h3>
+                <p class="hobbyText">Découvrir de nouvelles cultures stimule ma curiosité et élargit mes horizons. (Vietnam, Italie, Espagne, Suisse, Suède, Croatie, ...)</p>
+            </div>
+        </div>
+
+    </div>
     <div class="thirdSection section" id="projets">
+
+        <diV class="projectItem" id="bleu122Link">
+            <p class="projectDesc">2025 - Vue.js/Grails/MySQL</p>
+            <h2>Board Bleu122</h2>
+        </diV>
 
         <diV class="projectItem" id="exploverLink">
             <p class="projectDesc">2024 - Vue.js/PostgreSQL/Nest.js</p>
@@ -69,10 +110,7 @@
             <p class="projectDesc">2022 - Node.js/JS/Socket.io</p>
             <h2>PopUp Chat</h2>
         </diV>
-        <diV class="projectItem" id="crusherLink">
-            <p class="projectDesc">2021 - Node.js/Express.js/MySQL</p>
-            <h2>Crusher</h2>
-        </diV>
+
         <diV class="projectItem" id="spelldiceLink">
             <p class="projectDesc">2021 - HTML/CSS/JS/Electron.js</p>
             <h2>Spelldice</h2>
@@ -114,138 +152,149 @@
     </div>
 
     <footer class="footer">
-        <p>© 2024 Gianni HUYNH - Tous droits réservés.</p>
+        <p>© 2025 Gianni HUYNH - Tous droits réservés.</p>
     </footer>
 
     <script>
 
-        //AOS.init();
+    
 
 
+        const body = document.body;
+        const menuItems = Array.from(document.querySelectorAll('.categoryMenu li'));
+        const sections = Array.from(document.querySelectorAll('.section'));
 
-        var body = document.getElementsByTagName('body')[0];
+        const setActiveMenuItem = (sectionId) => {
+            if (!sectionId) {
+                return;
+            }
+            menuItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.target === sectionId);
+            });
+        };
 
-        var selectedSection = 0;
+        const getCurrentSectionId = (scrollPosition) => {
+            if (!sections.length) {
+                return null;
+            }
 
-        // trigger this function every time the user scrolls
-        window.onscroll = function (event) {
-            var scroll = window.pageYOffset;
-            var sectionIndex = Math.floor(scroll / window.innerHeight); // Calcule l'index de la section actuelle en fonction du défilement
+            let currentId = sections[0].id;
 
-            if (sectionIndex % 2 === 0) {
-                // Even section index, set background to black
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
-            } else {
-                // Odd section index, set background to white
+            for (const section of sections) {
+                if (scrollPosition >= section.offsetTop - window.innerHeight / 2) {
+                    currentId = section.id;
+                }
+            }
+
+            return currentId;
+        };
+
+        const lightSections = new Set(['mon-parcours', 'a-propos', 'contact']);
+
+        const updateTheme = (scrollPosition) => {
+            const currentSectionId = getCurrentSectionId(scrollPosition);
+
+            if (currentSectionId && lightSections.has(currentSectionId)) {
                 body.style.backgroundColor = 'white';
                 body.style.color = 'black';
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
             }
         };
 
-        const menuItems = document.querySelectorAll('.categoryMenu li');
+        const lenis = window.Lenis ? new Lenis({
+            duration: 1.1,
+            easing: (t) => 1 - Math.pow(2, -10 * t),
+            smoothWheel: true,
+            smoothTouch: false
+        }) : null;
+
+        if (lenis) {
+            lenis.on('scroll', ({ scroll }) => {
+                updateTheme(scroll);
+                setActiveMenuItem(getCurrentSectionId(scroll));
+            });
+
+            updateTheme(0);
+            setActiveMenuItem(getCurrentSectionId(0));
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        } else {
+            const handleScroll = () => {
+                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                updateTheme(scrollPosition);
+                setActiveMenuItem(getCurrentSectionId(scrollPosition));
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+        }
 
         menuItems.forEach(item => {
             item.addEventListener('click', function () {
-                // Supprimez la classe "active" de tous les éléments du menu
-                menuItems.forEach(item => item.classList.remove('active'));
-
-                // Ajoutez la classe "active" à l'élément sélectionné
-                this.classList.add('active');
-
-                // Faites défiler jusqu'à la section correspondante (si nécessaire)
-                const targetSection = this.textContent.toLowerCase();
+                const targetSection = this.dataset.target;
                 const section = document.getElementById(targetSection);
                 if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
+                    setActiveMenuItem(targetSection);
+                    if (lenis && typeof lenis.scrollTo === 'function') {
+                        lenis.scrollTo(section);
+                    } else {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
             });
         });
 
         document.getElementById("linkedinLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+        
             window.open("https://www.linkedin.com/in/gianni-huynh-1b9aa41b9/", "_blank");
         });
 
         document.getElementById("cvLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
-            window.open("assets/gianni_huynh_cv_2024.pdf", "_blank");
+          
+            window.open("assets/CV_Gianni_HUYNH_2025.pdf", "_blank");
         });
 
         document.getElementById("billeonWebsite").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+          
             window.open("https://www.billeon.fr/", "_blank");
         });
 
         document.getElementById("githubLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+           
             window.open("https://github.com/GianniHuynh", "_blank");
         });
 
         document.getElementById("exploverLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+            
             window.open("https://giannihuynh.notion.site/Billeon-Ambassadeurs-c9abae40c33042d897cfb0814bdc6a18?pvs=4", "_blank");
         });
 
         document.getElementById("billeonLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+         
             window.open("https://giannihuynh.notion.site/Application-Billeon-a43e5949129746dc894c99f0bb06aa0d?pvs=4", "_blank");
         });
 
         document.getElementById("popupLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+        
             window.open("https://giannihuynh.notion.site/PopUp-Chat-3058552ba3644d9abe1f40b0c5d5f953?pvs=4", "_blank");
         });
 
-        document.getElementById("crusherLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
-            window.open("https://giannihuynh.notion.site/Crusher-25bfcd67c86e473784d93552dd9d23f1?pvs=4", "_blank");
+        document.getElementById("bleu122Link").addEventListener("click", function () {
+          
+            window.open("https://giannihuynh.notion.site/Board-Bleu122-2aa5b5256d5080c1b1e7e93de2bf1991?source=copy_link", "_blank");
         });
 
         document.getElementById("spelldiceLink").addEventListener("click", function () {
-            // Ouvrir le lien dans une nouvelle fenêtre ou nouvel onglet
+      
             window.open("https://giannihuynh.notion.site/Spelldice-e8521b9aea6a491e979e4f6879364f27?pvs=4", "_blank");
         });
-
-        /*  const menuItems = document.querySelectorAll('.categoryMenu li');
- const sections = document.querySelectorAll('.section'); // Remplacez .section par le sélecteur de vos sections
- 
- const observerOptions = {
-     rootMargin: '-50%', // Ajustez la marge en fonction de vos besoins
- };
- 
- const observer = new IntersectionObserver(entries => {
-     entries.forEach(entry => {
-         if (entry.isIntersecting) {
-             const targetSection = entry.target.id;
-             const correspondingMenuItem = document.querySelector(`.categoryMenu li[data-target="${targetSection}"]`);
- 
-             if (correspondingMenuItem) {
-                 menuItems.forEach(item => item.classList.remove('active'));
-                 correspondingMenuItem.classList.add('active');
-             }
-         }
-     });
- }, observerOptions);
- 
- sections.forEach(section => {
-     observer.observe(section);
- });
- 
- menuItems.forEach(item => {
-     item.addEventListener('click', function () {
-         menuItems.forEach(item => item.classList.remove('active'));
-         this.classList.add('active');
- 
-         const targetSection = this.dataset.target; // Utilisez un attribut "data-" pour stocker la cible de la section
-         const section = document.getElementById(targetSection);
-         if (section) {
-             section.scrollIntoView({ behavior: 'smooth' });
-         }
-     });
- }); */
-
-
 
 
 
