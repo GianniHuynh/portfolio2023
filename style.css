@@ -126,7 +126,7 @@ ul {
 .hobbiesGrid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
 }
 
@@ -135,7 +135,7 @@ ul {
   flex-direction: column;
   gap: 20px;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -150,7 +150,7 @@ ul {
   position: relative;
   width: 100%;
   padding-top: 65%;
-  border-radius: 16px;
+  border-radius: 10px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.12);
 }
@@ -255,9 +255,12 @@ ul {
 
 .proposTitle {
   font-weight: 700;
-  margin-bottom: 60px;
+  font-size: 6em;
+}
 
-
+.parcoursTitle {
+  font-weight: 700;
+  margin-bottom: 40px;
   font-size: 6em;
 }
 
@@ -341,7 +344,7 @@ h2 {
 
 .proposImg {
   height: 350px;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 
 .arrowIcon {
