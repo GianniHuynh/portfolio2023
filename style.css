@@ -23,7 +23,7 @@ body {
 body {
   transition: background 1.5s ease;
   
-  background-color: black;
+  background-color: #0F0F0F;
   background-image: url("assets/fond.svg");
   background-size: cover;
   /* Ajuster la taille de l'image de fond */
@@ -31,8 +31,15 @@ body {
   /* Positionner l'image de fond au centre */
   background-repeat: no-repeat;
   /* Éviter la répétition de l'image de fond */
-  color: white;
+  color: #F5F5F5;
   position: relative;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  
 }
 
 .projectDesc{
@@ -52,8 +59,6 @@ width: fit-content;
 
 .proposText{
   font-size: 15px;
-  
-  
 }
 
 .mainTitle {

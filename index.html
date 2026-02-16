@@ -36,14 +36,17 @@
         <h1 class="parcoursTitle ">MON PARCOURS</h1>
         <div class="proposBox">
             <img class="proposImg" src="assets/gianni.png" alt="picture of me">
-            <p class="proposText">Je m’appelle <b>Gianni</b>, et je ne conçois pas seulement du code : je construis des solutions qui répondent à des <b>usages réels</b>. Mon parcours, du BTS SNIR au Master MAALSI à CESI, m'a permis de forger une expertise technique solide, mais c’est sur le terrain que j’ai appris l’essentiel : un bon produit naît de <b>l’écoute et de la collaboration.</b></br></br>
+            <p class="proposText">Je m’appelle <b>Gianni</b>, et je ne conçois pas seulement du code : je construis des solutions qui 
+                répondent à des <b>usages réels</b>. Mon parcours, du BTS SNIR au Master MAALSI à CESI, m'a permis de forger une expertise technique solide, 
+                mais c’est sur le terrain que j’ai appris l’essentiel : la performance technique n’a de valeur que si elle sert une <b>intention métier précise</b>  et un <b>usage durable.</b></br></br>
 
                 Fort de mes expériences en alternance chez <b>Billeon</b> (développement d'une application de 
                 billetterie évènementielle) et <b>Bleu122</b> (conception d'applications métier sur mesure), 
-                je combine aujourd'hui la <b>rigueur</b> de l'architecture logicielle avec la <b>vision 
-                globale</b> de projet.</br></br>
+                je combine aujourd'hui la <b>rigueur</b> de l'architecture logicielle avec une <b>vision projet 
+                </b> globale.</br></br>
 
-                Musicien et explorateur dans l'âme, j'aborde chaque ligne de code avec la même <b>exigence</b> que la composition d'un morceau ou la logistique d'une expédition en montagne : avec créativité, pragmatisme et un sens aigu de l'écoute de mes collaborateurs.
+                Musicien et passionné de montagne, j'apporte au développement la même rigueur que pour une ascension ou une composition : Faire preuve de <b>créativité</b>, 
+                de <b>calme face aux imprévus</b> et surtout, d'une réelle <b>écoute</b> de ceux qui m'entourent. Pour moi, un projet réussi est avant tout un travail d'équipe bien orchestré.
             </p>
         </div>
 
@@ -53,7 +56,7 @@
     
         <h1 class="proposTitle ">À PROPOS</h1>
         <p class="aboutIntro">
-            En dehors du code, je passe l’essentiel de mon temps à faire de la musique ou à voyager, deux activités qui me tiennent vraiment à cœur.
+            Quand je ne développe pas, je consacre mon temps à la création musicale et aux voyages. Ce sont deux piliers qui nourrissent ma curiosité et mon besoin constant d'explorer de nouveaux horizons, tant techniques qu'humains.
         </p>
         <div class="hobbiesGrid">
             <div class="hobbyCard">
@@ -62,7 +65,7 @@
                     <img class="hobbyImage hobbyImage--color" src="assets/hobby_guitare_color.jpg" alt="Gianni jouant de la guitare en couleur">
                 </div>
                 <h3 class="hobbyTitle">Musique</h3>
-                <p class="hobbyText">Guitariste depuis mes dix ans, j’ai joué dans plusieurs groupes et composé mes propres morceaux. Le jazz, le hip-hop et la soul sont au cœur de mes influences et façonnent mon jeu.</p>
+                <p class="hobbyText">Guitariste depuis l’enfance, nourri par le Jazz, le Hip-Hop et la Soul, ma passion pour la musique dépasse la simple pratique. En tant que président du média <a  href="https://www.neuvieme-vision.com/" target="_blank">Neuvième Vision</a>, je pilote la production de performances artistiques dédiées aux talents émergents toulousains. Ce rôle de facilitateur me permet de lier direction artistique, gestion humaine et expertise technique au service d'un projet collectif.</p>
             </div>
             <div class="hobbyCard">
                 <div class="hobbyImageWrapper">
@@ -70,7 +73,7 @@
                     <img class="hobbyImage hobbyImage--color" src="assets/hobby_rando_color.jpg" alt="Paysage de voyage en couleur">
                 </div>
                 <h3 class="hobbyTitle">Voyages</h3>
-                <p class="hobbyText">Mes voyages m’ont mené du Vietnam à l’Italie, en passant par l’Espagne, la Suisse, la Suède et la Croatie. J’aime autant découvrir de nouvelles cultures que partir marcher dans la nature : randonnées dans les Pyrénées et les Alpes, ou encore une traversée de la Laponie suédoise en van.</p>
+                <p class="hobbyText">Mes voyages m’ont mené du Vietnam à l’Italie, en passant par l’Espagne, la Suisse, la Suède et la Croatie ect... J’aime autant découvrir de nouvelles cultures que partir marcher dans la nature : randonnées dans les Pyrénées et les Alpes, ou encore une traversée de la Laponie suédoise en van.</p>
             </div>
         </div>
 
@@ -182,11 +185,11 @@
             const currentSectionId = getCurrentSectionId(scrollPosition);
 
             if (currentSectionId && lightSections.has(currentSectionId)) {
-                body.style.backgroundColor = 'white';
-                body.style.color = 'black';
+                body.style.backgroundColor = '#fffefc';
+                body.style.color = '#030303';
             } else {
-                body.style.backgroundColor = 'black';
-                body.style.color = 'white';
+                body.style.backgroundColor = '#030303';
+                body.style.color = '#fffefc';
             }
         };
 
