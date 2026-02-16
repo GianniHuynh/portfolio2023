@@ -251,16 +251,12 @@
             window.location.href = "mailto:gianni.huynh@icloud.com";
         });
 
-        document.getElementById("billeonWebsite").addEventListener("click", function () {
-          
-            window.open("https://www.billeon.fr/", "_blank");
-        });
-
-        document.getElementById("githubLink").addEventListener("click", function () {
-           
-            window.open("https://github.com/GianniHuynh", "_blank");
-        });
-
+        const billeonWebsiteElement = document.getElementById("billeonWebsite");
+        if (billeonWebsiteElement) {
+            billeonWebsiteElement.addEventListener("click", function () {
+                window.open("https://www.billeon.fr/", "_blank");
+            });
+        }
      
 
         document.getElementById("billeonLink").addEventListener("click", function () {
