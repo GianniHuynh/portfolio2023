@@ -3,6 +3,13 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: "Higuen Serif";
+  src: url("assets/font/Higuen_Serif.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -11,6 +18,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
 
 body {
   transition: background 1.5s ease;
@@ -50,10 +58,10 @@ width: fit-content;
 
 .mainTitle {
   color: #ebebeb;
-
+  font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 100px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: 10px;
   text-align: center;
@@ -106,7 +114,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   gap: 40px;
 }
 
@@ -118,6 +126,7 @@ ul {
 
 .aboutIntro {
   max-width: 800px;
+  text-align: center;
   font-size: 1.1em;
   line-height: 1.8;
   font-weight: 300;
@@ -135,7 +144,7 @@ ul {
   flex-direction: column;
   gap: 20px;
   padding: 30px;
-  border-radius: 10px;
+  
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -150,7 +159,7 @@ ul {
   position: relative;
   width: 100%;
   padding-top: 65%;
-  border-radius: 10px;
+  border-radius: 0px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.12);
 }
@@ -162,6 +171,26 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hobbyImage {
+  transition: opacity 0.6s ease;
+}
+
+.hobbyImage--bw {
+  opacity: 1;
+}
+
+.hobbyImage--color {
+  opacity: 0;
+}
+
+.hobbyCard:hover .hobbyImage--color {
+  opacity: 1;
+}
+
+.hobbyCard:hover .hobbyImage--bw {
+  opacity: 0;
 }
 
 .hobbyTitle {
@@ -254,14 +283,22 @@ ul {
 }
 
 .proposTitle {
-  font-weight: 700;
+  font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 6em;
 }
 
 .parcoursTitle {
-  font-weight: 700;
+  font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   margin-bottom: 40px;
   font-size: 6em;
+}
+
+.projectTitle {
+  font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 3em;
 }
 
 .proposBox {
@@ -298,6 +335,11 @@ h2 {
   font-size: 1.75em;
   font-weight: 100;
   /* margin-bottom: 40px; */
+}
+
+.contactText a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .contactCliquable {
@@ -344,7 +386,7 @@ h2 {
 
 .proposImg {
   height: 350px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .arrowIcon {
@@ -381,18 +423,34 @@ h2 {
     font-size: 3em;
   }
 
+  .parcoursTitle {
+    font-size: 3em;
+    
+  }
+
   .secondSection {
     justify-content: start;
     padding: 0 20px;
     min-height: 100vh;
     height: auto;
+    text-align: left;
+    align-items: flex-start;
     padding-bottom: 60px;
   }
 
   .aboutSection {
     padding: 80px 6% 60px 6%;
     gap: 30px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     min-height: auto;
+  }
+
+  .aboutIntro {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .hobbiesGrid {
@@ -419,7 +477,7 @@ h2 {
     height: auto !important;
     margin-top: 20px;
     object-fit: contain;
-    border-radius: 16px !important;
+    border-radius: 0px !important;
   }
 
   .projectItem {
@@ -435,8 +493,35 @@ h2 {
   }
 
   .fourthSection {
-    font-size: 10px;
-    padding: 0 20px;
+    padding: 60px 20px 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactCliquable {
+    justify-content: center;
+  }
+
+  .contactText {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .aboutIntro {
+    font-size: 15px;
+  }
+
+  p.hobbyText {
+    font-size: 15px;
+  }
+
+  .projectTitle {
+    margin-top: 10px ;
+    font-size: 25px;
+  }
+
+  .projectDesc {
+    font-size: 15px;
   }
 
   .thirdSection {
