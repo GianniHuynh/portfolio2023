@@ -115,7 +115,7 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: left;
-  gap: 40px;
+  gap: 20px;
 }
 
 .aboutTitle {
@@ -127,7 +127,7 @@ ul {
 .aboutIntro {
   max-width: 800px;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 15px;
   line-height: 1.8;
   font-weight: 300;
 }
@@ -144,6 +144,7 @@ ul {
   flex-direction: column;
   gap: 20px;
   padding: 30px;
+  padding-top: 20px;
   
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
@@ -199,7 +200,7 @@ ul {
 }
 
 .hobbyText {
-  font-size: 1em;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -285,14 +286,14 @@ ul {
 .proposTitle {
   font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .parcoursTitle {
   font-family: "Higuen Serif", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin-bottom: 40px;
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .projectTitle {
