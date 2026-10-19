@@ -4,301 +4,558 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gianni HUYNH - Développeur web et mobile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <title>Gianni Huynh · Développeur Full-stack Vue.js / Node.js · Toulouse</title>
+    <meta name="description" content="Gianni Huynh, développeur full-stack Vue.js / Node.js à Toulouse. 3 ans d'expérience en alternance chez Billeon et Bleu122, rigueur QA, IA au quotidien avec Claude Code. Mastère MAALSI (Bac+5).">
+    <link rel="canonical" href="https://gianni-huynh.dev/">
+    <meta name="theme-color" content="#f5f4f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://gianni-huynh.dev/">
+    <meta property="og:title" content="Gianni Huynh · Développeur Full-stack Vue.js / Node.js">
+    <meta property="og:description" content="Full-stack Vue.js / Node.js, QA et IA. Basé à Toulouse, disponible.">
+    <meta property="og:image" content="https://gianni-huynh.dev/assets/img/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="preload" href="assets/font/Higuen_Serif.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Applique le thème avant le rendu pour éviter un flash
+        document.documentElement.classList.add('js');
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) { }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gianni Huynh",
+        "jobTitle": "Développeur Full-stack",
+        "url": "https://gianni-huynh.dev",
+        "email": "mailto:gianni.huynh@icloud.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Toulouse", "addressCountry": "FR" },
+        "sameAs": ["https://www.linkedin.com/in/gianni-huynh", "https://github.com/GianniHuynh"],
+        "knowsAbout": ["Vue.js", "Node.js", "TypeScript", "Flutter", "QA", "Claude Code"]
+    }
+    </script>
 </head>
 
 <body>
-    
-    <div class="categoryMenu">
-        <ul>
-            <li data-target="accueil">Accueil</li>
-            <li data-target="mon-parcours">Mon Parcours</li>
-            <li data-target="a-propos">À propos</li>
-            <li data-target="projets">Projets</li>
-            <li data-target="contact">Contact</li>
-        </ul>
-    </div>
-    <div class="firstSection section" id="accueil">
+    <a class="skip-link" href="#main">Aller au contenu</a>
 
-        <h1 class="mainTitle">GIANNI HUYNH</h1>
-        <h3 class="mainSubtitle">Développeur web • Portfolio 2026</h3>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#accueil" class="logo" aria-label="Retour en haut">
+                <span class="logo__mark">GH</span>
+                <span class="logo__name">Gianni Huynh</span>
+            </a>
 
+            <nav class="nav" id="nav" aria-label="Navigation principale">
+                <a href="#profil" class="nav__link">Profil</a>
+                <a href="#expertise" class="nav__link">Expertise</a>
+                <a href="#parcours" class="nav__link">Parcours</a>
+                <a href="#projets" class="nav__link">Projets</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </nav>
 
-    </div>
-    <div class="secondSection section" id="mon-parcours">
-
-        <h1 class="parcoursTitle ">MON PARCOURS</h1>
-        <div class="proposBox">
-            <img class="proposImg" src="assets/gianni.png" alt="picture of me">
-            <p class="proposText">Je m’appelle <b>Gianni</b>, et je ne conçois pas seulement du code : je construis des solutions qui 
-                répondent à des <b>usages réels</b>. Mon parcours, du BTS SNIR au Master MAALSI à CESI, m'a permis de forger une expertise technique solide, 
-                mais c’est sur le terrain que j’ai appris l’essentiel : la performance technique n’a de valeur que si elle sert une <b>intention précise</b> et un <b>usage durable.</b></br></br>
-
-                Fort de mes expériences en alternance chez <b>Billeon</b> (développement d'une application de 
-                billetterie évènementielle) et <b>Bleu122</b> (conception d'applications métier sur mesure), 
-                je combine aujourd'hui la <b>rigueur</b> de l'architecture logicielle avec une <b>vision projet 
-                </b> globale.</br></br>
-
-                Musicien et passionné de montagne, j'apporte au développement la même rigueur que pour une ascension ou une composition : Faire preuve de <b>créativité</b>, 
-                de <b>calme face aux imprévus</b> et surtout, d'une réelle <b>écoute</b> de ceux qui m'entourent. Pour moi, un projet réussi est avant tout un travail d'équipe bien orchestré.
-            </p>
-        </div>
-
-    </div>
-    <div class="aboutSection section" id="a-propos">
-
-    
-        <h1 class="proposTitle ">À PROPOS</h1>
-        <p class="aboutIntro">
-            Quand je ne développe pas, je consacre mon temps à la création musicale et aux voyages. Ce sont deux piliers qui nourrissent ma curiosité et mon besoin constant d'explorer de nouveaux horizons, tant techniques qu'humains.
-        </p>
-        <div class="hobbiesGrid">
-            <div class="hobbyCard">
-                <div class="hobbyImageWrapper">
-                    <img class="hobbyImage hobbyImage--bw" src="assets/hobby_guitare.jpg" alt="Gianni jouant de la guitare">
-                    <img class="hobbyImage hobbyImage--color" src="assets/hobby_guitare_color.jpg" alt="Gianni jouant de la guitare en couleur">
-                </div>
-                <h3 class="hobbyTitle">Musique</h3>
-                <p class="hobbyText">Guitariste depuis l’enfance, nourri par le Jazz, le Hip-Hop et la Soul, ma passion pour la musique dépasse la simple pratique. En tant que président du média <a  href="https://www.neuvieme-vision.com/" target="_blank">Neuvième Vision</a>, je pilote la production de performances artistiques dédiées aux talents émergents toulousains. Ce rôle de facilitateur me permet de lier direction artistique, gestion humaine et expertise technique au service d'un projet collectif.</p>
-            </div>
-            <div class="hobbyCard">
-                <div class="hobbyImageWrapper">
-                    <img class="hobbyImage hobbyImage--bw" src="assets/hobby_randoo.jpg" alt="Paysage de voyage">
-                    <img class="hobbyImage hobbyImage--color" src="assets/hobby_rando_color.jpg" alt="Paysage de voyage en couleur">
-                </div>
-                <h3 class="hobbyTitle">Voyages</h3>
-                <p class="hobbyText">Mes voyages m’ont mené du Vietnam à l’Italie, en passant par l’Espagne, la Suisse, la Suède et la Croatie ect... J’aime autant découvrir de nouvelles cultures que partir marcher dans la nature : randonnées dans les Pyrénées et les Alpes, ou encore une traversée de la Laponie suédoise en van.</p>
+            <div class="header__actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Changer de thème">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+                </button>
+                <a href="assets/GIANNI_HUYNH_CV_2026.pdf" target="_blank" rel="noopener" class="btn btn--small btn--primary header__cv">CV</a>
+                <button class="icon-btn burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span>
+                </button>
             </div>
         </div>
+    </header>
 
-    </div>
-    <div class="thirdSection section" id="projets">
+    <main id="main">
 
-        <diV class="projectItem" id="NeuviemeVisionLink">
-            <p class="projectDesc">2024/2026 • Vue.js/Tailwind CSS/SEO</p>
-            <h2 class="projectTitle">NEUVIÈME VISION</h2>
-        </diV>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="accueil">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <p class="status reveal">
+                        <span class="status__dot" aria-hidden="true"></span>
+                        Disponible · Toulouse, hybride ou remote
+                    </p>
 
-        <diV class="projectItem" id="prisme122Link">
-            <p class="projectDesc">2025 • Vue.js/HTML/CSS</p>
-            <h2 class="projectTitle">PRISME 122</h2>
-        </diV>
+                    <h1 class="hero__title reveal">
+                        Gianni<br>Huynh
+                    </h1>
 
-        <diV class="projectItem" id="bleu122Link">
-            <p class="projectDesc">2025 • Vue.js/Grails/MySQL</p>
-            <h2 class="projectTitle">BOARD BLEU122</h2>
-        </diV>
+                    <p class="hero__role reveal">
+                        Développeur <strong>Full-stack Vue.js / Node.js</strong>
+                    </p>
 
-        <diV class="projectItem" id="ambassadeursLink">
-            <p class="projectDesc">2024 • Vue.js/PostgreSQL/Nest.js</p>
-            <h2 class="projectTitle">BILLEON AMBASSADEURS</h2>
-        </diV>
-        <diV class="projectItem" id="billeonLink">
-            <p class="projectDesc">2023 • Mobile/Flutter/Firebase/Vue.js</p>
-            <h2 class="projectTitle">APPLICATION BILLEON</h2>
-        </diV>
-        <diV class="projectItem" id="popupLink">
-            <p class="projectDesc">2022 • Node.js/JS/Socket.io</p>
-            <h2 class="projectTitle">POPUP CHAT</h2>
-        </diV>
+                    <p class="hero__lead reveal">
+                        Je conçois des applications web et mobiles pensées pour leurs utilisateurs,
+                        du recueil du besoin jusqu'à la mise en production. Une rigueur de testeur avant chaque livraison,
+                        et l'IA (Claude Code) comme outil de travail au quotidien.
+                    </p>
 
-       
+                    <div class="hero__cta reveal">
+                        <a href="#projets" class="btn btn--primary">
+                            Voir mes projets
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn--ghost">Me contacter</a>
+                    </div>
+                </div>
 
-    </div>
-    <div class="fourthSection section" id="contact">
+                <figure class="hero__photo reveal">
+                    <img src="assets/img/portrait.jpg" alt="Portrait de Gianni Huynh" width="1400" height="970" fetchpriority="high">
+                    <figcaption class="hero__badge">
+                        <span class="mono">Mastère MAALSI</span>
+                        <span>Bac+5 · CESI Labège</span>
+                    </figcaption>
+                </figure>
+            </div>
 
-        <div class="contactCliquable" id="linkedinLink">
-            <p class="contactText" style="font-weight: 500;">Linkedin</p>
-            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
+            <div class="container">
+                <dl class="stats">
+                    <div class="stat reveal">
+                        <dt class="stat__value">3 ans</dt>
+                        <dd class="stat__label">d'expérience en alternance, en start-up puis en agence</dd>
+                    </div>
+                    <div class="stat reveal">
+                        <dt class="stat__value">1 000+</dt>
+                        <dd class="stat__label">utilisateurs sur l'application de billetterie Billeon</dd>
+                    </div>
+                    <div class="stat reveal">
+                        <dt class="stat__value">5 min</dt>
+                        <dd class="stat__label">pour importer des milliers de lignes CSV, contre plusieurs jours à la main</dd>
+                    </div>
+                    <div class="stat reveal">
+                        <dt class="stat__value">÷2</dt>
+                        <dd class="stat__label">retours de bugs environ, après la réorganisation des sprints en Proxy PO</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-        </div>
+        <!-- ========== PROFIL ========== -->
+        <section class="section" id="profil">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">01 · Profil</span>
+                    <h2 class="section__title">Le lien entre le besoin<br>et le code.</h2>
+                </header>
 
-      
-        <div class="contactDiviser"></div>
-        <div class="contactCliquable" id="cvLink">
-            <p class="contactText" style="font-weight: 500;">Consulter mon CV</p>
-            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
+                <div class="profile">
+                    <div class="profile__text reveal">
+                        <p class="lead">
+                            Pendant trois ans d'alternance, chez <strong>Billeon</strong> (start-up de billetterie) puis
+                            chez <strong>Bleu122</strong> (agence de solutions digitales), j'ai développé des applications
+                            utilisées tous les jours : une app mobile, une plateforme en marque blanche, un ERP interne.
+                        </p>
+                        <p>
+                            J'y ai aussi appris ce qui se passe autour du code. En tant que Proxy Product Owner chez Billeon,
+                            j'organisais les sprints, j'écrivais les user stories et je menais la recette. Chez Bleu122, je
+                            qualifiais les anomalies avant chaque livraison client et je travaillais en binôme quotidien avec
+                            une UX Designer.
+                        </p>
+                        <p>
+                            Aujourd'hui je cherche un poste de développeur full-stack à Toulouse, dans une équipe où l'on
+                            parle aux utilisateurs, où l'on explique le pourquoi des choses, et où il reste beaucoup à apprendre.
+                        </p>
+                    </div>
 
-        </div>
-        <div class="contactDiviser"></div>
-        <div class="contactCliquable" id="emailLink">
-            <p class="contactText" style="font-weight: 500;">gianni.huynh@icloud.com</p>
-            <img class="arrowIcon" src="assets/link_arrow.svg" alt="link icon">
-        </div>
-        <div class="contactDiviser"></div>
-        <div>
-            <p class="contactText">07 82 31 23 03</p>
+                    <ul class="pillars">
+                        <li class="pillar reveal">
+                            <span class="pillar__num mono">A</span>
+                            <div>
+                                <h3>Usage d'abord</h3>
+                                <p>Recueil du besoin, user stories, recette utilisateur. Je traduis une demande métier en fonctionnalité qui sert vraiment.</p>
+                            </div>
+                        </li>
+                        <li class="pillar reveal">
+                            <span class="pillar__num mono">B</span>
+                            <div>
+                                <h3>Qualité avant livraison</h3>
+                                <p>Reproduction et qualification des anomalies, diagnostic dans le code, environnements de préprod. Rien ne part sans avoir été vérifié.</p>
+                            </div>
+                        </li>
+                        <li class="pillar reveal">
+                            <span class="pillar__num mono">C</span>
+                            <div>
+                                <h3>L'IA comme levier</h3>
+                                <p>J'utilise Claude Code pour concevoir, automatiser et outiller, et je relis chaque ligne générée avec un œil critique.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        </div>
-        <div class="contactDiviser"></div>
+        <!-- ========== EXPERTISE ========== -->
+        <section class="section section--alt" id="expertise">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">02 · Expertise</span>
+                    <h2 class="section__title">Ce que j'apporte<br>à une équipe.</h2>
+                </header>
 
+                <div class="skills">
+                    <article class="skill-card skill-card--wide reveal">
+                        <div class="skill-card__head">
+                            <span class="skill-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+                            </span>
+                            <h3>Développement full-stack</h3>
+                        </div>
+                        <p>Mon cœur de métier : des interfaces Vue.js soignées, branchées sur des API Node.js, Nest.js ou Grails, jusqu'au mobile avec Flutter.</p>
+                        <ul class="tags">
+                            <li class="tag tag--strong">Vue.js</li>
+                            <li class="tag tag--strong">Node.js</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">Nest.js</li>
+                            <li class="tag">Express.js</li>
+                            <li class="tag">Grails / Java</li>
+                            <li class="tag">Flutter</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Tailwind CSS</li>
+                            <li class="tag">SASS</li>
+                            <li class="tag">PostgreSQL</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">Firebase</li>
+                        </ul>
+                    </article>
 
-    </div>
+                    <article class="skill-card reveal">
+                        <div class="skill-card__head">
+                            <span class="skill-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+                            </span>
+                            <h3>QA &amp; tests</h3>
+                        </div>
+                        <p>Qualification d'anomalies, recette fonctionnelle et UX, tests automatisés.</p>
+                        <ul class="tags">
+                            <li class="tag">Jest</li>
+                            <li class="tag">JUnit</li>
+                            <li class="tag">Postman</li>
+                            <li class="tag">Jira</li>
+                            <li class="tag">Xray</li>
+                            <li class="tag">Recette (UAT)</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card__head">
+                            <span class="skill-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg>
+                            </span>
+                            <h3>IA &amp; agents</h3>
+                        </div>
+                        <p>Développement assisté par agent, conception de workflows et de skills, prompt engineering.</p>
+                        <ul class="tags">
+                            <li class="tag tag--strong">Claude Code</li>
+                            <li class="tag">Agents IA</li>
+                            <li class="tag">Tool use</li>
+                            <li class="tag">Prompt engineering</li>
+                            <li class="tag">Python</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card__head">
+                            <span class="skill-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></svg>
+                            </span>
+                            <h3>Ops &amp; outillage</h3>
+                        </div>
+                        <p>Administration de serveurs Linux, mise en place de préprod et de prod, déploiements.</p>
+                        <ul class="tags">
+                            <li class="tag">Linux</li>
+                            <li class="tag">Docker</li>
+                            <li class="tag">Git</li>
+                            <li class="tag">Cloud</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card__head">
+                            <span class="skill-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5a6.5 6.5 0 0 1 3 5.5"/></svg>
+                            </span>
+                            <h3>Produit &amp; méthodes</h3>
+                        </div>
+                        <p>Proxy Product Owner, recueil du besoin, user stories, animation de sprints.</p>
+                        <ul class="tags">
+                            <li class="tag">Scrum</li>
+                            <li class="tag">Kanban</li>
+                            <li class="tag">AMOA</li>
+                            <li class="tag">User stories</li>
+                            <li class="tag">SEO</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PARCOURS ========== -->
+        <section class="section" id="parcours">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">03 · Parcours</span>
+                    <h2 class="section__title">Expériences.</h2>
+                </header>
+
+                <ol class="timeline">
+                    <li class="job reveal">
+                        <div class="job__meta">
+                            <span class="mono">Sept. 2024 · aujourd'hui</span>
+                            <span class="job__place">Toulouse · Associatif</span>
+                        </div>
+                        <div class="job__body">
+                            <h3 class="job__title">Co-fondateur, Président &amp; Responsable technique</h3>
+                            <p class="job__company">Neuvième Vision</p>
+                            <p>Média culturel toulousain qui met en avant la scène musicale émergente. Seul responsable technique : portail web Vue.js / Tailwind avec architecture SEO, back-office en cours pour rendre l'équipe éditoriale autonome. Je gère aussi la production audio et les partenariats artistes.</p>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <div class="job__meta">
+                            <span class="mono">Juil. 2024 · Oct. 2025</span>
+                            <span class="job__place">Toulouse · Alternance</span>
+                        </div>
+                        <div class="job__body">
+                            <h3 class="job__title">Développeur Full-stack</h3>
+                            <p class="job__company">Bleu122 · agence de solutions digitales</p>
+                            <ul class="job__list">
+                                <li><strong>Board, ERP interne</strong> (Grails, Vue.js, MySQL) : tableau de feedback interactif connecté au CRM maison, à la place d'un suivi de tickets sur Google Sheets, et système de chiffrage technique et commercial pour automatiser les devis.</li>
+                                <li><strong>Import de données avec Claude Code</strong> : conception d'un algorithme qui traite de gros fichiers CSV à la structure irrégulière et les importe en base. Des milliers de lignes en 5 minutes, contre des jours de saisie.</li>
+                                <li><strong>Prisme122</strong> (Vue.js, Tailwind) : site vitrine du studio UX/UI, intégration pixel-perfect et quiz en arbre de décision, en binôme quotidien avec une UX Designer.</li>
+                                <li><strong>QA &amp; run</strong> : qualification des anomalies avant livraison, diagnostic de code, administration Linux et environnements préprod / prod.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <div class="job__meta">
+                            <span class="mono">Août 2022 · Juil. 2024</span>
+                            <span class="job__place">Toulouse · Alternance</span>
+                        </div>
+                        <div class="job__body">
+                            <h3 class="job__title">Développeur web &amp; mobile, Proxy Product Owner</h3>
+                            <p class="job__company">Billeon · start-up de billetterie événementielle</p>
+                            <ul class="job__list">
+                                <li><strong>Application mobile</strong> (Flutter, Firebase, Node.js) utilisée par plus de 1 000 personnes : refonte du front, parcours d'achat avec paiement partagé Lydia livré en un sprint de 2 semaines, messagerie de groupe conçue et développée seul.</li>
+                                <li><strong>Billeon Ambassadeurs</strong> (Vue.js, Tailwind, Nest.js TypeScript, PostgreSQL) : plateforme en marque blanche pour festivals, tout le front avec un système de templates dynamiques.</li>
+                                <li><strong>Proxy PO</strong> : organisation et priorisation des sprints sur un Notion sur mesure, user stories, recette. Les retours de bugs ont été divisés par deux environ.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="education reveal">
+                    <h3 class="education__title">Formation</h3>
+                    <ul class="education__list">
+                        <li>
+                            <span class="mono">2023 · 2025</span>
+                            <div>
+                                <strong>Mastère MAALSI</strong>, Manager en Architecture et Applications Logicielles des SI
+                                <span class="muted">Titre RNCP niveau 7 (Bac+5) · CESI Labège</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="mono">2022 · 2023</span>
+                            <div>
+                                <strong>Bachelor CDA</strong>, Concepteur Développeur d'Applications
+                                <span class="muted">CESI Labège</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="mono">2020 · 2022</span>
+                            <div>
+                                <strong>BTS SNIR</strong>, Systèmes Numériques, Informatique et Réseaux
+                                <span class="muted">Lycée Pierre-Paul Riquet</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROJETS ========== -->
+        <section class="section section--dark" id="projets">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">04 · Projets</span>
+                    <h2 class="section__title">Sélection de<br>réalisations.</h2>
+                </header>
+
+                <div class="projects">
+                    <a class="project project--featured reveal" href="https://giannihuynh.notion.site/Neuvi-me-Vision-3095b5256d5080bbadc5cda0eefd272e?pvs=73" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2024 · 2026</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">Neuvième Vision</h3>
+                        <p class="project__desc">Portail web d'un média musical toulousain que j'ai co-fondé. Architecture pensée pour le SEO, campagne de référencement en cours et back-office sur mesure en développement.</p>
+                        <ul class="tags">
+                            <li class="tag">Vue.js</li><li class="tag">Tailwind CSS</li><li class="tag">SEO</li>
+                        </ul>
+                    </a>
+
+                    <article class="project project--featured project--ai reveal">
+                        <div class="project__top">
+                            <span class="mono">2026 · Projet perso</span>
+                            <span class="project__private mono">Repo privé</span>
+                        </div>
+                        <h3 class="project__title">Assistant de recherche d'emploi</h3>
+                        <p class="project__desc">Workflow agentique piloté avec Claude Code : CLIs de recherche d'offres (WTTJ, HelloWork) qui respectent les robots.txt, template de CV LaTeX vérifié pour les ATS, skill de briefing quotidien. J'ai relu et corrigé le code généré.</p>
+                        <ul class="tags">
+                            <li class="tag">Claude Code</li><li class="tag">TypeScript</li><li class="tag">Bun</li><li class="tag">Tests</li>
+                        </ul>
+                    </article>
+
+                    <a class="project reveal" href="https://giannihuynh.notion.site/Board-Bleu122-2aa5b5256d5080c1b1e7e93de2bf1991?source=copy_link" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2025</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">Board Bleu122</h3>
+                        <p class="project__desc">ERP interne d'agence : feedback board connecté au CRM et chiffrage automatisé des devis.</p>
+                        <ul class="tags">
+                            <li class="tag">Vue.js</li><li class="tag">Grails</li><li class="tag">MySQL</li>
+                        </ul>
+                    </a>
+
+                    <a class="project reveal" href="https://giannihuynh.notion.site/Prisme-122-2f75b5256d508027a9b8d324b69940d5?source=copy_link" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2025</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">Prisme 122</h3>
+                        <p class="project__desc">Site vitrine d'un studio UX/UI, animations, micro-interactions et configurateur d'offre en arbre de décision.</p>
+                        <ul class="tags">
+                            <li class="tag">Vue.js</li><li class="tag">Tailwind CSS</li><li class="tag">UX</li>
+                        </ul>
+                    </a>
+
+                    <a class="project reveal" href="https://giannihuynh.notion.site/Billeon-Ambassadeurs-c9abae40c33042d897cfb0814bdc6a18" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2024</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">Billeon Ambassadeurs</h3>
+                        <p class="project__desc">Plateforme modulaire en marque blanche pour les programmes ambassadeurs de festivals.</p>
+                        <ul class="tags">
+                            <li class="tag">Vue.js</li><li class="tag">Nest.js</li><li class="tag">PostgreSQL</li>
+                        </ul>
+                    </a>
+
+                    <a class="project reveal" href="https://giannihuynh.notion.site/Application-Billeon-a43e5949129746dc894c99f0bb06aa0d?pvs=4" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2023</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">Application Billeon</h3>
+                        <p class="project__desc">App de billetterie utilisée par plus de 1 000 personnes, avec paiement partagé et messagerie de groupe.</p>
+                        <ul class="tags">
+                            <li class="tag">Flutter</li><li class="tag">Firebase</li><li class="tag">Node.js</li>
+                        </ul>
+                    </a>
+
+                    <a class="project reveal" href="https://giannihuynh.notion.site/PopUp-Chat-3058552ba3644d9abe1f40b0c5d5f953?pvs=4" target="_blank" rel="noopener">
+                        <div class="project__top">
+                            <span class="mono">2022</span>
+                            <span class="project__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+                        </div>
+                        <h3 class="project__title">PopUp Chat</h3>
+                        <p class="project__desc">Messagerie temps réel, un premier projet autour des WebSockets.</p>
+                        <ul class="tags">
+                            <li class="tag">Node.js</li><li class="tag">Socket.io</li><li class="tag">JavaScript</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== AU-DELÀ DU CODE ========== -->
+        <section class="section" id="hors-code">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">05 · Au-delà du code</span>
+                    <h2 class="section__title">Ce qui me nourrit.</h2>
+                </header>
+
+                <div class="hobbies">
+                    <article class="hobby reveal">
+                        <div class="hobby__media">
+                            <img class="hobby__img hobby__img--bw" src="assets/img/music-bw.jpg" alt="" loading="lazy" width="1200" height="960">
+                            <img class="hobby__img hobby__img--color" src="assets/img/music.jpg" alt="Gianni jouant de la guitare" loading="lazy" width="1200" height="960">
+                        </div>
+                        <div class="hobby__body">
+                            <h3>Musique</h3>
+                            <p>Guitariste depuis l'âge de 11 ans, nourri au jazz, au hip-hop et à la soul. Avec <a href="https://www.neuvieme-vision.com/" target="_blank" rel="noopener">Neuvième Vision</a>, je produis des performances d'artistes émergents toulousains : prise de son, mixage, direction artistique.</p>
+                        </div>
+                    </article>
+
+                    <article class="hobby reveal">
+                        <div class="hobby__media">
+                            <img class="hobby__img hobby__img--bw" src="assets/img/travel-bw.jpg" alt="" loading="lazy" width="1200" height="960">
+                            <img class="hobby__img hobby__img--color" src="assets/img/travel.jpg" alt="Paysage de randonnée en montagne" loading="lazy" width="1200" height="960">
+                        </div>
+                        <div class="hobby__body">
+                            <h3>Voyages &amp; montagne</h3>
+                            <p>Du Vietnam à la Suède, en passant par l'Italie et la Croatie. Randonnées dans les Pyrénées et les Alpes, et une traversée de la Laponie suédoise en van en 2024 : autonomie, logistique, calme face aux imprévus.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT ========== -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact__card reveal">
+                    <span class="eyebrow">06 · Contact</span>
+                    <h2 class="contact__title">Un poste full&#8209;stack, QA ou IA&nbsp;?<br><em>Parlons-en.</em></h2>
+                    <p class="contact__text">Je recherche un CDI à Toulouse et alentours, en hybride ou en full remote. Je réponds rapidement.</p>
+
+                    <div class="contact__mail">
+                        <a href="mailto:gianni.huynh@icloud.com" class="contact__email">gianni.huynh@icloud.com</a>
+                        <button class="btn btn--ghost btn--small" id="copyEmail" type="button" data-email="gianni.huynh@icloud.com">
+                            <span class="copy-label">Copier</span>
+                        </button>
+                    </div>
+
+                    <ul class="contact__links">
+                        <li><a href="https://www.linkedin.com/in/gianni-huynh" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+                        <li><a href="https://github.com/GianniHuynh" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+                        <li><a href="assets/GIANNI_HUYNH_CV_2026.pdf" target="_blank" rel="noopener">CV (PDF) <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+                        <li><a href="tel:+33782312303">07 82 31 23 03</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>© 2026 Gianni HUYNH - Tous droits réservés.</p>
+        <div class="container footer__inner">
+            <p>© <span id="year">2026</span> Gianni Huynh</p>
+            <p class="muted">Toulouse, France</p>
+        </div>
     </footer>
 
-    <script>
-
-    
-
-
-        const body = document.body;
-        const menuItems = Array.from(document.querySelectorAll('.categoryMenu li'));
-        const sections = Array.from(document.querySelectorAll('.section'));
-
-        const setActiveMenuItem = (sectionId) => {
-            if (!sectionId) {
-                return;
-            }
-            menuItems.forEach(item => {
-                item.classList.toggle('active', item.dataset.target === sectionId);
-            });
-        };
-
-        const getCurrentSectionId = (scrollPosition) => {
-            if (!sections.length) {
-                return null;
-            }
-
-            let currentId = sections[0].id;
-
-            for (const section of sections) {
-                if (scrollPosition >= section.offsetTop - window.innerHeight / 2) {
-                    currentId = section.id;
-                }
-            }
-
-            return currentId;
-        };
-
-        const lightSections = new Set(['mon-parcours', 'a-propos', 'contact']);
-
-        const updateTheme = (scrollPosition) => {
-            const currentSectionId = getCurrentSectionId(scrollPosition);
-
-            if (currentSectionId && lightSections.has(currentSectionId)) {
-                body.style.backgroundColor = '#fffefc';
-                body.style.color = '#030303';
-            } else {
-                body.style.backgroundColor = '#030303';
-                body.style.color = '#fffefc';
-            }
-        };
-
-        const lenis = window.Lenis ? new Lenis({
-            duration: 1.1,
-            easing: (t) => 1 - Math.pow(2, -10 * t),
-            smoothWheel: true,
-            smoothTouch: false
-        }) : null;
-
-        if (lenis) {
-            lenis.on('scroll', ({ scroll }) => {
-                updateTheme(scroll);
-                setActiveMenuItem(getCurrentSectionId(scroll));
-            });
-
-            updateTheme(0);
-            setActiveMenuItem(getCurrentSectionId(0));
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        } else {
-            const handleScroll = () => {
-                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-                updateTheme(scrollPosition);
-                setActiveMenuItem(getCurrentSectionId(scrollPosition));
-            };
-
-            window.addEventListener('scroll', handleScroll);
-            handleScroll();
-        }
-
-        menuItems.forEach(item => {
-            item.addEventListener('click', function () {
-                const targetSection = this.dataset.target;
-                const section = document.getElementById(targetSection);
-                if (section) {
-                    setActiveMenuItem(targetSection);
-                    if (lenis && typeof lenis.scrollTo === 'function') {
-                        lenis.scrollTo(section);
-                    } else {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-
-        document.getElementById("linkedinLink").addEventListener("click", function () {
-        
-            window.open("https://www.linkedin.com/in/gianni-huynh-1b9aa41b9/", "_blank");
-        });
-
-        document.getElementById("cvLink").addEventListener("click", function () {       
-            window.open("assets/GIANNI_HUYNH_CV_2026.pdf", "_blank");
-        });
-
-        document.getElementById("emailLink").addEventListener("click", function () {
-            window.location.href = "mailto:gianni.huynh@icloud.com";
-        });
-
-        const billeonWebsiteElement = document.getElementById("billeonWebsite");
-        if (billeonWebsiteElement) {
-            billeonWebsiteElement.addEventListener("click", function () {
-                window.open("https://www.billeon.fr/", "_blank");
-            });
-        }
-     
-
-        document.getElementById("billeonLink").addEventListener("click", function () {
-         
-            window.open("https://giannihuynh.notion.site/Application-Billeon-a43e5949129746dc894c99f0bb06aa0d?pvs=4", "_blank");
-        });
-
-        document.getElementById("ambassadeursLink").addEventListener("click", function () {
-         
-         window.open("https://giannihuynh.notion.site/Billeon-Ambassadeurs-c9abae40c33042d897cfb0814bdc6a18", "_blank");
-     });
-
-        document.getElementById("popupLink").addEventListener("click", function () {
-        
-            window.open("https://giannihuynh.notion.site/PopUp-Chat-3058552ba3644d9abe1f40b0c5d5f953?pvs=4", "_blank");
-        });
-
-        document.getElementById("bleu122Link").addEventListener("click", function () {
-          
-            window.open("https://giannihuynh.notion.site/Board-Bleu122-2aa5b5256d5080c1b1e7e93de2bf1991?source=copy_link", "_blank");
-        });
-
-        document.getElementById("prisme122Link").addEventListener("click", function () {
-          
-          window.open("https://giannihuynh.notion.site/Prisme-122-2f75b5256d508027a9b8d324b69940d5?source=copy_link", "_blank");
-      });
-
-      document.getElementById("NeuviemeVisionLink").addEventListener("click", function () {
-          
-        window.open("https://giannihuynh.notion.site/Neuvi-me-Vision-3095b5256d5080bbadc5cda0eefd272e?pvs=73", "_blank");
-    });
-
-      
-
-
-
-
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
